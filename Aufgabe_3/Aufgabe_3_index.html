@@ -4,52 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe_2</title>
+    <title>Aufgabe_3</title>
+    <style>
+        div {
+          border: 2px solid white;
+          background-color: white;
+          padding-right: 0,5px;        
+        }
+     </style>
 </head>
 <body>
     <h1 style="font-family:Arial">Mein Portfolio</h1>
-    <h3 style="font-family:Arial">Inhaltsverzeichnis</h3>
-    <p style="font-family:Arial"><a href="#Anker1">Über mich...</a></p>
-    <p style="font-family:Arial"><a href="#Fotoanker">Fotos</a></p>
-    <p style="font-family:Arial"><a href="#Videoanker">Videos</a></p>
-    <br>
-    <h3 style="font-family:Arial" id="Anker1">Über mich...</h3>
-	<p style="font-family:Arial"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br>
-		Aenean commodo ligula eget dolor. Aenean massa.<br>
-		Cum sociis natoque penatibus et magnis dis parturient montes, <br>
-		nascetur ridiculus mus. Donec quam felis, ultricies nec, <br>
-		pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <br>
-		Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. <br>
-		In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. <br>
-		Nullam dictum felis eu pede mollis pretium. Integer tincidunt. <br>
-		Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.<br>
-		Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. <br>
-		Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. <br>
-		Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. <br>
-    </p>
-    <br>
+        <p style="font-family:Arial">Hier bekommt ihr einen Einblick in <a href="#Fotoanker" style="font-family:Arial">Fotos</a>
+             und <a href="#Videoanker" style="font-family:Arial">Videos</a>, <br>
+             die von mir erstellt und aufbereitet wurden.</p>
     <h3 style="font-family:Arial" id="Fotoanker">Fotos</h3>
-        <a href="Link.html"><img src="../Material/L02/task_material/foto/foto1.jpg"></a>
-        <img src="../Material/L02/task_material/foto/foto2.jpg">
-        <img src="../Material/L02/task_material/foto/foto3.jpg">
-        <img src="../Material/L02/task_material/foto/foto4.jpg">
+        <div style="float:left;"><img src="./Bilder/Blumen1.jpg"></div>
+        <div style="float:left;"><img src="./Bilder/Blumen2.jpg"><br><img src="./Bilder/Blumen3.jpg"></div>
+    <br style="clear:both" />
     <br>
+        <div style="float:left;"><img src="./Bilder/Wald1.jpg"><br><img src="./Bilder/Wald2.jpg"></div>
+        <div style="float:left;"><img src="./Bilder/Wald3.jpg"></div>
+    <br>
+    <div style="float:left;" padding="5px;">
     <h3 style="font-family:Arial" id="Videoanker">Videos</h3>
         <video controls>
-            <source src="../Material/L02/task_material/animation/clip1.mp4" type="video/mp4">
-            <source src="../Material/L02/task_material/animation/clip1.ogg" type="video/ogg">
+            <source src="./Videos/clip2.mp4" type="video/mp4">
         </video>
         <video controls>
-            <source src="../Material/L02/task_material/animation/clip2.mp4" type="video/mp4">
-            <source src="../Material/L02/task_material/animation/clip2.ogg" type="video/ogg">
+            <source src="./Videos/clip3.mp4" type="video/mp4">
+        </video>
+        <br>
+        <video controls>
+            <source src="./Videos/clip4.mp4" type="video/mp4">
         </video>
         <video controls>
-            <source src="../Material/L02/task_material/animation/clip3.mp4" type="video/mp4">
-            <source src="../Material/L02/task_material/animation/clip3.ogg" type="video/ogg">
+            <source src="./Videos/clip1.mp4" type="video/mp4">
         </video>
-        <video controls>
-            <source src="../Material/L02/task_material/animation/clip4.mp4" type="video/mp4">
-            <source src="../Material/L02/task_material/animation/clip4.ogg" type="video/ogg">
-        </video>
+        <br>
+    </div>
+    <br style="clear:both" />
+    <br>
+    <div style="float:left;">
+        <h4 style="font-family:Arial">Verlinkungen</h4>
+        <a href="./About_me.html" style="font-family:Arial">About me...</a> 
+        <br>
+        <a href="./Contact.html" style="font-family:Arial">Kontakt</a>
+    </div>
 </body>
 </html>
