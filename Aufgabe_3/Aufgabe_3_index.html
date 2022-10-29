@@ -6,27 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe_3</title>
     <style>
-        div {
+        .table {
           border: 2px solid white;
           background-color: white;
           padding-right: 0,5px;        
         }
-     </style>
+    </style>
+    <style>
+        .nav {
+            border: 2px solid white;
+            background-color: white;
+            padding-right: 20px;  
+        }
+    </style>
 </head>
 <body>
+    <nav> 
+        <div class="nav" style="float:left;"><a href="./Aufgabe_3_index.html" style="font-family:Arial">Mein Portfolio</a></div>
+        <div class="nav" style="float:left;"><a href="./About_me.html" style="font-family:Arial">About me...</a></div>
+        <div class="nav" style="float:left;"><a href="./Contact.html" style="font-family:Arial">Kontakt</a></div>
+    </nav>
+    <br style="clear:both"/>
     <h1 style="font-family:Arial">Mein Portfolio</h1>
-        <p style="font-family:Arial">Hier bekommt ihr einen Einblick in <a href="#Fotoanker" style="font-family:Arial">Fotos</a>
-             und <a href="#Videoanker" style="font-family:Arial">Videos</a>, <br>
-             die von mir erstellt und aufbereitet wurden.</p>
+        <p style="font-family:Arial">Hier finden Sie verschiedene <a href="#Fotoanker" style="font-family:Arial">Fotos</a>
+             und <a href="#Videoanker" style="font-family:Arial">Videos</a>.<br>
+        </p>
     <h3 style="font-family:Arial" id="Fotoanker">Fotos</h3>
-        <div style="float:left;"><img src="./Bilder/Blumen1.jpg"></div>
-        <div style="float:left;"><img src="./Bilder/Blumen2.jpg"><br><img src="./Bilder/Blumen3.jpg"></div>
+        <div class="table" style="float:left;"><img src="./Bilder/Blumen1.jpg"></div>
+        <div class="table" style="float:left;"><img src="./Bilder/Blumen2.jpg"><br><img src="./Bilder/Blumen3.jpg"></div>
     <br style="clear:both" />
     <br>
-        <div style="float:left;"><img src="./Bilder/Wald1.jpg"><br><img src="./Bilder/Wald2.jpg"></div>
-        <div style="float:left;"><img src="./Bilder/Wald3.jpg"></div>
+        <div class="table" style="float:left;"><img src="./Bilder/Urlaub1.jpg"><br><img src="./Bilder/Urlaub2.jpg"></div>    
+        <div class="table" style="float:left;"><img src="./Bilder/Urlaub3.jpg"></div>    
+    <br style="clear:both" />
     <br>
-    <div style="float:left;" padding="5px;">
+        <div class="table" style="float:left;"><img src="./Bilder/Wald3.jpg"></div>
+        <div class="table" style="float:left;"><img src="./Bilder/Wald1.jpg"><br><img src="./Bilder/Wald2.jpg"></div>
+    <br style="clear:both" />
+    <br>
+    <div class="table" style="float:left;" padding="5px;">
     <h3 style="font-family:Arial" id="Videoanker">Videos</h3>
         <video controls>
             <source src="./Videos/clip2.mp4" type="video/mp4">
@@ -42,14 +60,6 @@
             <source src="./Videos/clip1.mp4" type="video/mp4">
         </video>
         <br>
-    </div>
-    <br style="clear:both" />
-    <br>
-    <div style="float:left;">
-        <h4 style="font-family:Arial">Verlinkungen</h4>
-        <a href="./About_me.html" style="font-family:Arial">About me...</a> 
-        <br>
-        <a href="./Contact.html" style="font-family:Arial">Kontakt</a>
     </div>
 </body>
 </html>
