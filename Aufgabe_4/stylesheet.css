@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: #555555;
 }
 header {
     background-image: url(./Bilder/IMG_20180213_215111147.jpg);
@@ -17,38 +18,35 @@ a:link{
     position: relative;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #555555;
 }
 a:visited{
     position: relative;
-    text-decoration: underline;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #555555
 }
 a:hover{
     position: relative;
-    text-decoration: underline;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #ffffff;
 }
 a:active{
     position: relative;
-    text-decoration: underline;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #ffffff
 }
 #aktuell{
-    text-decoration: underline;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #ffffff;
 }
-
-
 .table {
     float: left;
 }
@@ -59,12 +57,13 @@ a:active{
     justify-content: center;
 }
 .flex-container{
+    margin-top: 30px;
     width: 800px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    gap: 120px;
+    justify-content: space-between;
+
 }
 .flex-container2{
     justify-content: center;
@@ -81,7 +80,7 @@ width: 700px;
 }
 .flex-container3{
     width: 300px;
-    margin: 30px;
+    margin: 50px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -89,28 +88,41 @@ width: 700px;
     justify-content: space-between;
 }
 #Logo{
-    margin: 30px;
+    margin: 50px;
+    border-bottom: 0;
+
+}
+#Logo a{
+    border-bottom: 0;
 }
 #name, #email{
-    background-color: #555555;
+    background-color: #777777;
     font-weight: bold;
     color: #ffffff;
     border: 0;
-    width: 600px;
+    width: 800px;
     height: 30px;
 }
 #message{
-    background-color: #555555;
+    display: flex;
+    background-color: #777777;
     color: #ffffff;
+    vertical-align: top;
     font-weight: bold;
-    align-content: flex-end;
     border: 0;
-    width: 600px;
+    width: 795px;
     height: 300px;  
 }
+.Message{
+    display: flex;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    
+}
 #senden{
-    background-color: #555555;
-    width: 62px;
+    background-color: #777777;
+    width: 58px;
     height: 30px;
     font-weight: bold;
     font-size: 80%;
@@ -119,7 +131,7 @@ width: 700px;
     align-items: center;
 }
 input{
-    text-align: start;
+    vertical-align: top;
 }
 .main{
     width: 800px;
@@ -134,16 +146,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-main3{
-    width: 800px;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .footer{
-    margin: 0;
     width: 800px;
     display: flex;
     align-items: center;
@@ -153,9 +159,12 @@ main3{
     text-align: left;
 }
 footer {
-    margin: 0;
     background-color: #eaeaea;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
+    color: #777777;
+}
+#footer a{
+    border-bottom: 0;
 }
