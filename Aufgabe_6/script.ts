@@ -25,23 +25,23 @@ let SPWachstum : string = parseFloat(BevoelkerungSP2022-BevoelkerungSP2008 + " M
 console.log("Deutschland")
 console.log("Die Gesamtzahl der Einwohnerinnen und Einwohner in Deutschland in 2022 beträgt " + BevoelkerungDE2022 + " Mio.");
 console.log("Relativ zur Gesamtzahl in der EU entspricht dies ca. " + DErelativzuEU + " %.");
-console.log("Prozentual ist die Einwohnerzahl in Deutschland seit 2008 um ca. " + DEWachstumsrate + " % angestiegen.")
-console.log("Dies entspricht einer Wachstumsrate von ungefähr " + DEWachstum + " Millionen Einwohner(inne)n.")
+console.log("Prozentual ist die Einwohnerzahl in Deutschland seit 2008 um ca. " + DEWachstumsrate + " % angestiegen.");
+console.log("Dies entspricht einer Wachstumsrate von ungefähr " + DEWachstum + " Millionen Einwohner(inne)n.");
 console.log(" ")
 console.log("Frankreich")
 console.log("Die Gesamtzahl der Einwohnerinnen und Einwohner in Frankreich in 2022 beträgt " + BevoelkerungFR2022 + " Mio.");
 console.log("Relativ zur Gesamtzahl in der EU entspricht dies ca. " + FRrelativzuEU + " %.");
-console.log("Prozentual ist die Einwohnerzahl in Frankreich seit 2008 um ca. " + FRWachstumsrate + " % angestiegen.")
-console.log("Dies entspricht einer Wachstumsrate von ungefähr " + FRWachstum + " Millionen Einwohner(inne)n.")
+console.log("Prozentual ist die Einwohnerzahl in Frankreich seit 2008 um ca. " + FRWachstumsrate + " % angestiegen.");
+console.log("Dies entspricht einer Wachstumsrate von ungefähr " + FRWachstum + " Millionen Einwohner(inne)n.");
 console.log(" ")
 console.log("Italien")
 console.log("Die Gesamtzahl der Einwohnerinnen und Einwohner in Italien in 2022 beträgt " + BevoelkerungIT2022 + " Mio.");
 console.log("Relativ zur Gesamtzahl in der EU entspricht dies ca. " + ITrelativzuEU + " %.");
-console.log("Prozentual ist die Einwohnerzahl in Italien seit 2008 um ca. " + ITWachstumsrate + " % angestiegen.")
-console.log("Dies entspricht einer Wachstumsrate von ungefähr " + ITWachstum + " Millionen Einwohner(inne)n.")
+console.log("Prozentual ist die Einwohnerzahl in Italien seit 2008 um ca. " + ITWachstumsrate + " % angestiegen.");
+console.log("Dies entspricht einer Wachstumsrate von ungefähr " + ITWachstum + " Millionen Einwohner(inne)n.");
 console.log(" ")
 console.log("Spanien")
 console.log("Die Gesamtzahl der Einwohnerinnen und Einwohner in Spanien in 2022 beträgt " + BevoelkerungSP2022 + " Mio.");
 console.log("Relativ zur Gesamtzahl in der EU entspricht dies ca. " + SPrelativzuEU + " %.");
-console.log("Prozentual ist die Einwohnerzahl in Spanien seit 2008 um ca. " + SPWachstumsrate + " % angestiegen.")
-console.log("Dies entspricht einer Wachstumsrate von ungefähr " + SPWachstum + " Millionen Einwohner(inne)n.")
+console.log("Prozentual ist die Einwohnerzahl in Spanien seit 2008 um ca. " + SPWachstumsrate + " % angestiegen.");
+console.log("Dies entspricht einer Wachstumsrate von ungefähr " + SPWachstum + " Millionen Einwohner(inne)n.");
