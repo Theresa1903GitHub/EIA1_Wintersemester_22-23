@@ -1,4 +1,4 @@
-let BevoelkerungEU2008 = 438.73;
+const BevoelkerungEU2008 = 438.73;
 let BevoelkerungEU2022 = 446.83;
 const BevoelkerungDE2008 = 82.11;
 let BevoelkerungDE2022 = 83.24;

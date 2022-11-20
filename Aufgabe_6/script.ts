@@ -1,4 +1,4 @@
-let BevoelkerungEU2008 : number = 438.73; 
+const BevoelkerungEU2008 : number = 438.73; 
 let BevoelkerungEU2022 : number = 446.83;
 const BevoelkerungDE2008 : number = 82.11;
 let BevoelkerungDE2022 : number = 83.24;
@@ -21,7 +21,6 @@ let ITWachstum : string = parseFloat(BevoelkerungIT2022-BevoelkerungIT2008 + " M
 let SPrelativzuEU : string = parseFloat(BevoelkerungSP2022 / BevoelkerungEU2022 * 100 + " %").toFixed(0);
 let SPWachstumsrate : string = parseFloat((BevoelkerungSP2022 - BevoelkerungSP2008) / BevoelkerungSP2008 * 100 + " %").toFixed(1);
 let SPWachstum : string = parseFloat(BevoelkerungSP2022-BevoelkerungSP2008 + " Mio").toFixed(2);
-
 
 console.log("Deutschland")
 console.log("Die Gesamtzahl der Einwohnerinnen und Einwohner in Deutschland in 2022 beträgt " + BevoelkerungDE2022 + " Mio.");
