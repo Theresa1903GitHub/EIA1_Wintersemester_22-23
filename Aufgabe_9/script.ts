@@ -142,6 +142,9 @@ namespace A9 {
     
     Remixbutton.addEventListener("click", function ()
     {
+        for (let p=0; p<neueTonfolge.length; p++) {
+            neueTonfolge.pop ()
+        }
             for(let index=0; index<5; index++)
         {
             neueTonfolge[index] = Tonfolge[Math.round (Math.random() * 11)];
@@ -150,7 +153,7 @@ namespace A9 {
     
     Recordbutton.addEventListener("click", function ()
     {
-        for (let o=0; o<5; o++) {
+        for (let o=0; o<neueTonfolge.length; o++) {
             neueTonfolge.pop ()
         }
         C.addEventListener("click", function(){
