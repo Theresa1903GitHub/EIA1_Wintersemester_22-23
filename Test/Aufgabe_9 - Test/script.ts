@@ -154,51 +154,39 @@ Recordbutton.addEventListener("click", function ()
         neueTonfolge.pop ()
     }
     C.addEventListener("click", function(){
-        playSample(sound5)
         neueTonfolge.push(sound5) 
     })
     Db.addEventListener("click", function(){
-        playSample(sound7)
         neueTonfolge.push(sound7) 
     })
     D.addEventListener("click", function(){
-        playSample(sound6)
         neueTonfolge.push(sound6) 
     })
     Eb.addEventListener("click", function(){
-        playSample(sound9)
         neueTonfolge.push(sound9) 
     })
     E.addEventListener("click", function(){
-        playSample(sound8)
         neueTonfolge.push(sound8) 
     })
     F.addEventListener("click", function(){
-        playSample(sound10)
         neueTonfolge.push(sound10) 
     })
     Gb.addEventListener("click", function(){
-        playSample(sound12)
         neueTonfolge.push(sound12) 
     })
     G.addEventListener("click", function(){
-        playSample(sound11)
         neueTonfolge.push(sound11) 
     })
     Ab.addEventListener("click", function(){
-        playSample(sound2)
         neueTonfolge.push(sound2) 
     })
     A.addEventListener("click", function(){
-        playSample(sound1)
         neueTonfolge.push(sound1) 
     })
     Bb.addEventListener("click", function(){
-        playSample(sound4)
         neueTonfolge.push(sound4) 
     })
-    H.addEventListener("click", function(){
-        playSample(sound3)  
+    H.addEventListener("click", function(){ 
         neueTonfolge.push(sound3) 
     })
     
