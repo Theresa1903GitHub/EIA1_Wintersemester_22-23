@@ -1,5 +1,5 @@
-var A9;
-(function (A9) {
+var A9neu;
+(function (A9neu) {
     const C = document.querySelector("#C");
     const Db = document.querySelector("#Db");
     const D = document.querySelector("#D");
@@ -233,5 +233,5 @@ var A9;
             playSample(sound4);
         }
     }
-})(A9 || (A9 = {}));
+})(A9neu || (A9neu = {}));
 //# sourceMappingURL=script.js.map
