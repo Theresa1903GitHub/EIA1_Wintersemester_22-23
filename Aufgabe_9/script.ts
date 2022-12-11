@@ -1,4 +1,4 @@
-namespace A8 {
+namespace A9 {
 
 const C = document.querySelector("#C")
 const Db = document.querySelector("#Db")
@@ -27,7 +27,7 @@ const sound11:HTMLAudioElement = new Audio('./assets/Keyboard/g.mp3');
 const sound12:HTMLAudioElement = new Audio('./assets/Keyboard/gf.mp3');
 
 function playSample (Klang){
-    Klang.play()
+    Klang.play();
 }
 
 C.addEventListener("click", function(){
@@ -68,6 +68,7 @@ H.addEventListener("click", function(){
 })
 
 const Tonfolge:any [] = [sound5, sound7, sound6, sound9, sound8, sound10, sound12, sound11, sound2, sound1, sound4, sound3];
+const neueTonfolge: any [] = [sound5, sound7, sound6, sound9, sound8]
 
 function sleep(milliseconds) {
     const date = Date.now();
@@ -77,10 +78,22 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
   }
 
-const Playbutton = document.querySelector('#play') as HTMLImageElement
+const Playbutton = document.querySelector('.fa-play') as HTMLImageElement
+const Stopbutton = document.querySelector('.fa-square') as HTMLImageElement
+const Remixbutton = document.querySelector('.fa-circle') as HTMLImageElement
 
+//const intervalID = setInterval(Melodie, 500);
 
-Playbutton.addEventListener("click", function ()
+/*function Melodie()
+{
+    for (let i=0; i<neueTonfolge.length; i++)
+        {
+            playSample(neueTonfolge[i]);
+            sleep(1000);
+        }
+}
+*/
+/*Playbutton.addEventListener("click", function ()
 {
     setInterval(function() 
     {
@@ -91,6 +104,46 @@ Playbutton.addEventListener("click", function ()
                 //sleep(1500);
             }
     }, 1500);
+})
+*/
+
+let intervalID
+
+Playbutton.addEventListener("click", function () {
+    intervalID=setInterval(() =>{
+        for (let i=0; i<neueTonfolge.length; i++){
+            playSample(neueTonfolge[i]);
+            sleep(1000);
+            }
+        },1000);
+    Playbutton.classList.add('is-hidden');
+    Stopbutton.classList.remove('is-hidden');
+})
+
+Stopbutton.addEventListener("click", function () {
+    clearInterval (intervalID);
+    Stopbutton.classList.add('is-hidden');
+    Playbutton.classList.remove('is-hidden');
+})
+
+
+//let X : number = Math.round (Math.random() * 11)
+
+
+/*function Mix () 
+{
+    let X : number = Math.round (Math.random() * 11)
+    playSample (Tonfolge[X]);
+    console.log("playSample");
+}
+*/
+
+Remixbutton.addEventListener("click", function ()
+{
+        for(let index=0; index<5; index++)
+    {
+        neueTonfolge[index] = Tonfolge[Math.round (Math.random() * 11)];
+    }
 })
 
 /*var i = 0
@@ -105,6 +158,17 @@ Playbutton.addEventListener("click", function ()
     }, 1200);
 })
 */
+
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener("keydown", Tastatur);
 
@@ -144,17 +208,6 @@ function Tastatur(e) {
     }
     else if(e.keyCode == 85) {
         playSample(sound4)
-    }
-
-    else if(e.keyCode == 32) {
-        setInterval(function() 
-        {
-            for (let i=0; i<Tonfolge.length; i++)
-                {
-                    playSample(Tonfolge[i])
-                    sleep(1500);
-                }
-        }, 1);
     }
 }
 
