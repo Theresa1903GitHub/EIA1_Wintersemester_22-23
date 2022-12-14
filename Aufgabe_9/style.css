@@ -72,5 +72,7 @@ body {
 .is-hidden {
     display: none !important;
 }
-
+.notactive {
+    display: none !important;
+}
 

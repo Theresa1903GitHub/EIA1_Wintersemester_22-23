@@ -64,19 +64,22 @@ var A9;
         playSample(sound3);
     });
     const Tonfolge = [sound5, sound7, sound6, sound9, sound8, sound10, sound12, sound11, sound2, sound1, sound4, sound3];
-    const neueTonfolge = [sound5, sound7, sound6, sound9, sound8];
+    let neueTonfolge = [sound5, sound7, sound6, sound9, sound8];
+    // damit der Playbutton am Anfang funktioniert, müssten hier einige Werte 
     const Aufnahme = [];
-    function sleep(milliseconds) {
-        const date = Date.now();
-        let currentDate = null;
-        do {
-            currentDate = Date.now();
-        } while (currentDate - date < milliseconds);
-    }
+    /* function sleep(milliseconds) {
+         const date = Date.now();
+         let currentDate = null;
+         do {
+           currentDate = Date.now();
+         } while (currentDate - date < milliseconds);
+       }
+     */
     const Playbutton = document.querySelector('.fa-play');
     const Stopbutton = document.querySelector('.fa-square');
     const Remixbutton = document.querySelector('.fa-circle');
     const Recordbutton = document.querySelector('.fa-microphone');
+    const RecordStop = document.querySelector('.fa-trash-alt');
     //const intervalID = setInterval(Melodie, 500);
     /*function Melodie()
     {
@@ -102,10 +105,22 @@ var A9;
     */
     let intervalID;
     Playbutton.addEventListener("click", function () {
+        console.log(neueTonfolge.length);
+        console.log(neueTonfolge[0]);
+        console.log(neueTonfolge[1]);
+        console.log(neueTonfolge[2]);
+        console.log(neueTonfolge[3]);
+        console.log(neueTonfolge[4]);
+        console.log(neueTonfolge[5]);
+        var i = 0;
         intervalID = setInterval(() => {
-            for (let i = 0; i < neueTonfolge.length; i++) {
-                playSample(neueTonfolge[i]);
-                sleep(1000);
+            //for (let i=0; i<neueTonfolge.length; i++){
+            playSample(neueTonfolge[i]);
+            //sleep(1000);
+            //}
+            i++;
+            if (i == neueTonfolge.length) {
+                i = 0;
             }
         }, 1000);
         Playbutton.classList.add('is-hidden');
@@ -125,17 +140,35 @@ var A9;
     }
     */
     Remixbutton.addEventListener("click", function () {
-        for (let p = 0; p < neueTonfolge.length; p++) {
-            neueTonfolge.pop();
-        }
+        neueTonfolge = [];
+        //let laenge = neueTonfolge.length;
+        //if (neueTonfolge.length <= 4)
+        //{
+        //    laenge = 5;
+        //}
         for (let index = 0; index < 5; index++) {
             neueTonfolge[index] = Tonfolge[Math.round(Math.random() * 11)];
         }
     });
+    let Record = document.getElementsByClassName('.notactive');
     Recordbutton.addEventListener("click", function () {
-        for (let o = 0; o < neueTonfolge.length; o++) {
-            neueTonfolge.pop();
-        }
+        Recordbutton.classList.add('notactive');
+        RecordStop.classList.remove('notactive');
+        //let grenzwert = neueTonfolge.length
+        //for (let o=0; o<grenzwert; o++) 
+        //{
+        //neueTonfolge.pop();
+        //}
+        console.log(neueTonfolge.length);
+        neueTonfolge = [];
+    });
+    RecordStop.addEventListener("click", function () {
+        RecordStop.classList.add('notactive');
+        Recordbutton.classList.remove('notactive');
+        neueTonfolge = [];
+    });
+    //console.log(RecordStop.classList.contains('notactive'));
+    if (Recordbutton.classList.contains('notactive')) {
         C.addEventListener("click", function () {
             neueTonfolge.push(sound5);
         });
@@ -172,7 +205,13 @@ var A9;
         H.addEventListener("click", function () {
             neueTonfolge.push(sound3);
         });
-    });
+    }
+    else {
+        neueTonfolge = [];
+    }
+    //    setInterval (()=> {
+    //     console.log(neueTonfolge.length);
+    //    },2000)
     /*var i = 0
     
     Playbutton.addEventListener("click", function ()

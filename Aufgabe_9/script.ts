@@ -68,21 +68,23 @@ namespace A9 {
     })
     
     const Tonfolge:any [] = [sound5, sound7, sound6, sound9, sound8, sound10, sound12, sound11, sound2, sound1, sound4, sound3];
-    const neueTonfolge: any [] = [sound5, sound7, sound6, sound9, sound8]
+    let neueTonfolge: any [] = [sound5, sound7, sound6, sound9, sound8]
+    // damit der Playbutton am Anfang funktioniert, müssten hier einige Werte 
     const Aufnahme: any [] = []
     
-    function sleep(milliseconds) {
+   /* function sleep(milliseconds) {
         const date = Date.now();
         let currentDate = null;
         do {
           currentDate = Date.now();
         } while (currentDate - date < milliseconds);
       }
-    
+    */
     const Playbutton = document.querySelector('.fa-play') as HTMLImageElement
     const Stopbutton = document.querySelector('.fa-square') as HTMLImageElement
     const Remixbutton = document.querySelector('.fa-circle') as HTMLImageElement
     const Recordbutton = document.querySelector('.fa-microphone') as HTMLElement
+    const RecordStop = document.querySelector('.fa-trash-alt') as HTMLElement
     
     //const intervalID = setInterval(Melodie, 500);
     
@@ -111,12 +113,23 @@ namespace A9 {
     
     let intervalID
     
+    
     Playbutton.addEventListener("click", function () {
+        console.log(neueTonfolge.length);
+        console.log(neueTonfolge[0]);
+        console.log(neueTonfolge[1]);
+        console.log(neueTonfolge[2]);
+        console.log(neueTonfolge[3]);
+        console.log(neueTonfolge[4]);
+        console.log(neueTonfolge[5]);
+        var i = 0
         intervalID=setInterval(() =>{
-            for (let i=0; i<neueTonfolge.length; i++){
+            //for (let i=0; i<neueTonfolge.length; i++){
                 playSample(neueTonfolge[i]);
-                sleep(1000);
-                }
+                //sleep(1000);
+                //}
+                i++
+                if (i == neueTonfolge.length) { i = 0}
             },1000);
         Playbutton.classList.add('is-hidden');
         Stopbutton.classList.remove('is-hidden');
@@ -142,58 +155,90 @@ namespace A9 {
     
     Remixbutton.addEventListener("click", function ()
     {
-        for (let p=0; p<neueTonfolge.length; p++) {
-            neueTonfolge.pop ()
-        }
-            for(let index=0; index<5; index++)
+        neueTonfolge = []
+        //let laenge = neueTonfolge.length;
+        //if (neueTonfolge.length <= 4)
+        //{
+        //    laenge = 5;
+        //}
+        for(let index=0; index<5; index++)
         {
             neueTonfolge[index] = Tonfolge[Math.round (Math.random() * 11)];
         }
     })
-    
-    Recordbutton.addEventListener("click", function ()
-    {
-        for (let o=0; o<neueTonfolge.length; o++) {
-            neueTonfolge.pop ()
-        }
-        C.addEventListener("click", function(){
-            neueTonfolge.push(sound5) 
-        })
-        Db.addEventListener("click", function(){
-            neueTonfolge.push(sound7) 
-        })
-        D.addEventListener("click", function(){
-            neueTonfolge.push(sound6) 
-        })
-        Eb.addEventListener("click", function(){
-            neueTonfolge.push(sound9) 
-        })
-        E.addEventListener("click", function(){
-            neueTonfolge.push(sound8) 
-        })
-        F.addEventListener("click", function(){
-            neueTonfolge.push(sound10) 
-        })
-        Gb.addEventListener("click", function(){
-            neueTonfolge.push(sound12) 
-        })
-        G.addEventListener("click", function(){
-            neueTonfolge.push(sound11) 
-        })
-        Ab.addEventListener("click", function(){
-            neueTonfolge.push(sound2) 
-        })
-        A.addEventListener("click", function(){
-            neueTonfolge.push(sound1) 
-        })
-        Bb.addEventListener("click", function(){
-            neueTonfolge.push(sound4) 
-        })
-        H.addEventListener("click", function(){
-            neueTonfolge.push(sound3) 
-        })
+
         
+    let Record = document.getElementsByClassName('.notactive');
+
+    Recordbutton.addEventListener("click", function ()
+    {   
+        Recordbutton.classList.add('notactive');
+        RecordStop.classList.remove('notactive');
+        //let grenzwert = neueTonfolge.length
+        //for (let o=0; o<grenzwert; o++) 
+        //{
+        //neueTonfolge.pop();
+        //}
+        console.log(neueTonfolge.length);
+        neueTonfolge = [] 
+   })
+
+   RecordStop.addEventListener("click", function ()
+   { 
+        RecordStop.classList.add('notactive');
+        Recordbutton.classList.remove('notactive');
+        neueTonfolge = [] 
+   })
+
+  //console.log(RecordStop.classList.contains('notactive'));
+  
+   
+   if (Recordbutton.classList.contains ('notactive')) {
+    C.addEventListener("click", function(){
+        neueTonfolge.push(sound5); 
     })
+    Db.addEventListener("click", function(){
+        neueTonfolge.push(sound7) 
+    })
+    D.addEventListener("click", function(){
+        neueTonfolge.push(sound6) 
+    })
+    Eb.addEventListener("click", function(){
+        neueTonfolge.push(sound9) 
+    })
+    E.addEventListener("click", function(){
+        neueTonfolge.push(sound8) 
+    })
+    F.addEventListener("click", function(){
+        neueTonfolge.push(sound10) 
+    })
+    Gb.addEventListener("click", function(){
+        neueTonfolge.push(sound12) 
+    })
+    G.addEventListener("click", function(){
+        neueTonfolge.push(sound11) 
+    })
+    Ab.addEventListener("click", function(){
+        neueTonfolge.push(sound2) 
+    })
+    A.addEventListener("click", function(){
+        neueTonfolge.push(sound1) 
+    })
+    Bb.addEventListener("click", function(){
+        neueTonfolge.push(sound4) 
+    })
+    H.addEventListener("click", function(){
+        neueTonfolge.push(sound3) 
+    }
+)} else {
+    neueTonfolge = [];
+}
+
+
+//    setInterval (()=> {
+//     console.log(neueTonfolge.length);
+//    },2000)
+
     /*var i = 0
     
     Playbutton.addEventListener("click", function ()
