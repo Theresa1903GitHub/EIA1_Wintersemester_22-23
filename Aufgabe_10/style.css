@@ -8,7 +8,6 @@ body {
 
 #inputText {
     margin: auto;
-
     display: flex;
     position: relative;
     text-align: center;
@@ -39,6 +38,7 @@ body {
     justify-content: left;
     padding-left: 70px;
     overflow: hidden;
+    text-align: left;
     width: 370px;
 }
 

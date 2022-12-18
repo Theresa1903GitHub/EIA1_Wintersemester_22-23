@@ -83,46 +83,6 @@ enter.addEventListener ("keypress", function(event: KeyboardEvent): void {
 
 });
 
-//const wrapper = document.querySelector(".wrapper");
-
-//const Kreis = document.createElement("img");
-//Kreis.src = path.relative 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//function Rechnung (Zahl1: number, Zahl2: string, Zahl3: string, Zahl4: string, Land: string) {
-    //Einwohnerzahl.innerHTML = Zahl1 + " Mio.";
-
-/*function Klick (Taste){
-    if (Taste.keyCode == 13)
-    wrapper.appendChild(newDiv);
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
