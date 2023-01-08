@@ -150,7 +150,6 @@ var A11;
                 // übergeben, damit an der entsprechenden Stelle im Array der Wert geändert werden kann.
                 toggleCheckState(index);
                 updateDone();
-                //updateDone();
             });
             todo.querySelector(".trash").addEventListener("click", function () {
                 // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,

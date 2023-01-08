@@ -190,7 +190,6 @@ function drawListToDOM(): void {
             // übergeben, damit an der entsprechenden Stelle im Array der Wert geändert werden kann.
             toggleCheckState(index);
             updateDone();
-            //updateDone();
         });
         todo.querySelector(".trash").addEventListener("click", function(): void {
             // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
@@ -209,7 +208,6 @@ function drawListToDOM(): void {
 function updateCounter(): void {
     counterDOMElement.innerHTML = todos.length + " in total";
 }
-
 
 
 function updateDone(): void {
