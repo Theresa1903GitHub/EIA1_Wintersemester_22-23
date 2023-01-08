@@ -14,7 +14,7 @@
 //var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
 //var todosChecked: boolean[] =    [true    , false   , false];
 
-namespace A11 {
+
 
 
 interface Task {
@@ -55,7 +55,6 @@ var todosDOMElement: HTMLElement;
 var counterDOMElement: HTMLElement;
 var openDOMElement: HTMLElement;
 var doneDOMElement: HTMLElement;
-declare var Artyom: any;
 
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
@@ -74,73 +73,6 @@ window.addEventListener("load", function(): void {
     counterDOMElement = document.querySelector("#counter");
     openDOMElement = document.querySelector("#open");
     doneDOMElement = document.querySelector("#done");
-    
-
- /*   
-const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
-const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
-*/
-
-//const recognition = new SpeechRecognitionResult();
-//recognition.interimResults = true;
-//recognition.lang = 'de';
-
-//recognition.addEventListener('result') 
-    
-//var recognition : HTMLElement
-
-//window.addEventListener("load", function(): void {
-    const artyom: any = new Artyom();
-        
-        artyom.addCommands({
-            indexes: ["erstelle Aufgabe *", "neue Aufgabe *"],
-            smart: true,
-            action: function(i: any, wildcard: string): void {
-                    console.log("Neue Aufgabe wird erstellt: " + wildcard);
-                    //function neueTask (){
-                        //if (wildcard !=""){
-                            //console.log("recognition")
-                            let Aufgabe = {
-                                name: wildcard,
-                                checked: false};
-                            //console.log("bin drin")
-                            todos.unshift(Aufgabe);
-                            //console.log("bin drin")
-                            drawListToDOM ();
-                            
-                    //}
-       // }
-    }
-        });
-        
-        function startContinuousArtyom(): void {
-            artyom.fatality();
-
-            setTimeout(
-                function(): void {
-                    artyom.initialize({
-                        lang: "de-DE",
-                        continuous: true,
-                        listen: true,
-                        interimResults: true,
-                        debug: true
-                    }).then(function(): void {
-                        console.log("Ready!");
-                    });
-                }, 
-                250);
-        }
-        
-        startContinuousArtyom();
-        
-    //});
-    
-    
-    
-
-
-
 
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
@@ -196,7 +128,6 @@ function drawListToDOM(): void {
             // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
             // übergeben, damit die entsprechende Stelle im Array gelöscht werden kann.
             deleteTodo(index);
-            updateDone();            
         });
 
         // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
@@ -213,21 +144,14 @@ function updateCounter(): void {
 
 
 function updateDone(): void {
-    if (todos.length == 0){
-        openDOMElement.innerHTML = 0 + " open";
-        doneDOMElement.innerHTML = 0 + " done";
-    }
-    else {
-        let i=0
-        for (let index=0; index < todos.length; index++)
-            if (todos[index].checked == true){
-                i++
-            }
-        let open:number = todos.length - i
-        openDOMElement.innerHTML = open + " open";
-        doneDOMElement.innerHTML = i + " done";
-    }
-   
+    let i=0
+    for (let index=0; index < todos.length; index++)
+        if (todos[index].checked == true){
+            i++
+        }
+    let open:number = todos.length - i
+    openDOMElement.innerHTML = open + " open";
+    doneDOMElement.innerHTML = i + " done";
 }
 
 
@@ -308,9 +232,4 @@ function deleteTodo(index: number): void {
      * wird wieder getriggert
      */
     drawListToDOM();
-}
-
-
-
-
 }
