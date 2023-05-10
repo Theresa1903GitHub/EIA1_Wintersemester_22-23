@@ -62,6 +62,7 @@ var A11;
         doneDOMElement = document.querySelector("#done");
         const Bild = document.getElementById('Bild');
         const Bild1 = document.getElementById('Bild1');
+        const Hallo = new Audio('./Hallo.mp3');
         /*
        const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
        const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
@@ -81,6 +82,7 @@ var A11;
                 console.log("Neue Aufgabe wird erstellt: " + wildcard);
                 Bild.classList.remove('hidden');
                 Bild1.classList.add('hidden');
+                Hallo.play();
                 //function neueTask (){
                 //if (wildcard !=""){
                 //console.log("recognition")

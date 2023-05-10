@@ -1,4 +1,4 @@
-const Bild = document.getElementById('bild') 
+/*const Bild = document.getElementById('bild') 
 
 window.addEventListener("load", function(): void {
     const artyom: any = new Artyom();
@@ -32,3 +32,42 @@ window.addEventListener("load", function(): void {
         
         startContinuousArtyom();
 })
+*/
+
+
+//Zählt von 0 bis 9
+let i:number= 0;
+
+while (i<10){
+    console.log(i);
+    i++;
+}
+
+//Zählt von 0 bis 10
+let y:number= 0;
+
+while (y<=10){
+    console.log(y);
+    y++;
+}
+
+//Zählt von 10 bis 0
+let x:number= 10;
+
+while (x>=0){
+    console.log(x);
+    x--;
+}
+
+//Zählt von 10 bis 0
+for (let z:number = 10; z >= 0; z--){
+    console.log(z);
+}
+
+//Aufgabe: Probeklausur 
+let a:number;
+while (a<5){
+    a += a;
+    console.log(a);    
+} 
+console.log(a); 

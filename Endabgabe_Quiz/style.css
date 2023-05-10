@@ -1,0 +1,186 @@
+/*Der Universalselektor wirkt generell auf alle Elemente und 
+setzt in meinem Fall die Schrift in der Schriftart Trebuchet MS, 
+färbt diese in Petrol und "manipuliert" das Box-Modell so, dass 
+width, padding und border schon in die Angaben eingeschlossen werden. */
+* {
+    color: #003c44;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*Gilt für den gesamten Body und setzt einige grundsätzliche, optische Grundlagen fest.
+U.a. den Ursprung auf 0, die Elemente prinzipiell frei platzierbar und im nächsten Schritt
+vertikal und horizontal mittig, Elemente werden untereinander platziert und die Hintergrundfarbe 
+wir auch auf einen Petrolton festgelegt.*/ 
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items:center;
+    background-color: #008899;
+}
+/*Stylt die Antwort-Buttons:
+Hintergrundfarbe Petrol, Schriftfarbe Weiß, kein Rand, abgerundete Ecken und Höhe 25px*/
+.btn {
+    background-color: #008799;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    height: 25px;
+}
+/*Stylt die Quiz-Auswahl-Buttons:
+entsprechend der Antwort-Buttons + automatische Breite, damit sie sich bei nebeneinander 
+angeordneter Platzierung an die Weite der weißen Untergrundfläche anpassen.*/
+.btn2 {
+    background-color: #008799;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    width: auto;
+    height: 25px;
+}
+/*Stylt die Antwort-Buttons für den Moment, in dem man darüber hovert:
+Hintergrundfarbe Weiß, Schriftfarbe Petrol, Rand 30px, abgerundete Ecken.
+Dieser Style ist für die Smartphone-Darstellung jedoch irrelevant, 
+da hier nicht gehovert werden kann*/
+.btn:hover {
+    background-color: #ffffff;
+    color: #005677;
+    border: 30px;
+    border-radius: 5px;
+}
+/*Stylt den weißen Hintergrund-Kasten:
+Hintergrundfarbe Weiß, Breite 340px, abgerundete Ecken und Innenabstand (Inhalte zum Boxrand) 10px*/
+.container {
+    width: 340px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+/*Stylt den main-Bereich:
+Sorgt wenn nötig für einen Zeilenumbruch*/
+main {
+    flex-wrap: wrap;
+}
+/*Um die Antworten in einem 4er-System untereinander (mit Zwischenabstand 5px
+und Abstand nach Oben von 20px) darzustellen zu können*/
+.btn-grid {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+}
+/*Um die Quiztyp-Auswahl in einem 2-2-System (mit Zwischenabstand 
+5px und Abstand nach Oben von 20px) darstellen zu können*/
+.start {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px;
+    margin: 20px 0;
+}
+/*Stylt den Footer: absolute Positionierung am unteren Rand des Displays, 
+Hintergrundfarbe dunkles Petrol, Breite 100% und Inhalte vertikal zentrieren.*/
+footer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    background-color: #006d77;
+    bottom: 0;
+}
+/*Blendet alle aktuell nicht gebrauchten Elemente aus*/
+.hide {
+    display: none;
+}
+/*Flexbox, die die Inhalte des Footers enthält: Inhalte werden in einer Reihe (hoizontal),
+und mit weitest möglichem Abstand zueinander platziert, Breite der Flexbox auf 375px gestellt,
+Inhate zentriet und Innenabstand zu den Inhalten: rechts und links jeweils 10px*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 375px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*Färbt das entsprechende Element bei richtiger Beantwortung der Frage grün*/
+.correct{
+    background-color: green;
+}
+/*Färbt das entsprechende Element bei falscher Beantwortung der Frage rot*/
+.wrong{
+    background-color: red;
+}
+/*Spricht die Inhalte des Infocreens nach der Beantwortung einer Frage an:
+Schriftfarbe Weiß, kein Rahmen, abgerundete Ecken, Schriftgröße 15px, Schriftart 
+"Trebuchet MS" und jeweils Innenabstand von 5px*/
+.info{
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/*legt die maximale Breite des Infolinks fest, damit dieser nicht über en Kasten hinausläuft*/
+#link{
+    width: 80%;
+}
+/*Sorgt dafür, dass alle verwendeten <p>- und <a>-Tags mit der 
+Schriftfarbe Weiß und der Schriftgröße "small" dargestellt werden.*/
+p, a{
+    color: white;
+    font-size: small;
+}
+/*Spricht den Schriftzug "Yeah! That's right!" bzw "Oops! That's not correct! an,
+skaliert diesenn auf 110% und setzt ihn zentriert*/
+#infos{
+    font-size: 110%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/*Spricht die Inhalte des Endscreens an und stellt einen petrolfarbenen Kasten ohne Rahmen und 
+mit abgerundeten Ecken dar. Die Inhalte dieses Kastens werden untereinander platziert, und der
+Text wird zentiert, mit der Schriftart "Trebuchet MS" und in der Größe 15px dargestellt*/
+#won{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #008799;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*Skaliert den "winnerText" auf 110%*/
+#winnerText{
+    font-size: 110%;
+}
+/*Skaliert die "winner"-Grafik auf eine Weite von 50%*/
+#winner{
+    width: 50%;
+}
+/*Stylt den TryAgain-Button mit Hintergrundfarbe Weiß, Schriftfarbe Petrol,
+ohne Rand, mit abgerundeten Ecken, auf halbe Breite des petrolfarbenen Kastens, 
+der dahinter liegt, und auf eine Höhe von 25px */
+.btn3 {
+    background-color: #ffffff;
+    color: #008799;
+    border: 0;
+    width: 50%;
+    border-radius: 5px;
+    height: 25px;
+}
+/*Setzt alle Inhalte des Endscreens vertikal und korizontal mittig*/
+.Gewonnen{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

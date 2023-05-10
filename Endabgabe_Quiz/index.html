@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Quiz App</title>
+</head>
+<body>
+     <!-- weiße Container-Box als Hintergrund für die Fragenwelemente-->
+    <div class="container">
+        <!-- Container mit Frage und den 4 Antwortbuttons-->
+        <div id="question-container" class="hide">
+            <br>
+            <div id="question">Question</div><br>
+            <div id="answer-buttons" class="btn-grid">
+                <button id="answer1" class="btn">Answer 1</button>
+                <button id="answer2" class="btn">Answer 2</button>
+                <button id="answer3" class="btn">Answer 3</button>
+                <button id="answer4" class="btn">Answer 4</button>
+            </div>
+        </div>
+        <!-- Startscreen mit den Auswahlbuttons der verschiedenen Quiztypen-->
+        <div id="start" class="start">
+            <button id="html-btn" class="html-btn btn2">HTML</button>
+            <button id="css-btn" class="css-btn btn2">CSS</button>
+            <button id="ts-btn" class="ts-btn btn2">TypeScript</button>
+            <button id="mixed-btn" class="mixed-btn btn2">gemischt</button>
+        </div>
+        <!-- Screen, der nach der Beantwortung einer Frage angezeigt wird (beinhaltet weitere Infos und Link) -->
+        <div id="info" class="info hide">
+            <p id="infos">Infos:</p>
+            <p id="infotext">Infotext</p>
+            <a id="link" href="https://www.google.de"></a>
+            <br>
+        </div>
+        <!-- Endscreen mit dem Hinweis, dass das Spiel gewonnen wurde, 
+            kleiner Grafik und "Try again?"-Button-->
+        <div id="won" class="Gewonnen">
+            <p id="winnerText" class="hide">Great job! You've got 5 points!</p>
+            <div>
+                <img id="winner" class="hide" src="./images/winner.png" alt="">
+            </div>
+            <div>
+                <button id="again" class="btn3 hide">Try again?</button>
+                <br id="break" class="hide">
+            </div>     
+        </div>
+    </div>
+        <br>
+        <!-- Next-Button-->
+        <div class="controls">
+            <button id="next-btn" class="next-btn btn hide">Weiter >></button>
+        </div>
+        <!-- Darstellung des Scores-->
+        <div>
+            <h4>Your score: <span id="score">0</span></h4>
+        </div>
+        <br style="clear:both">
+    <br><br>
+    <!-- Footer mit Name und Matrikelnummer-->
+    <footer>
+        <div class="flex-container">
+            <div>
+                <p>Theresa Hauser</p>
+                <br>
+            </div>
+            <div>
+                <p>Matrikelnummer: 272983</p>
+                <br>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
